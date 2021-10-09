@@ -1,0 +1,25 @@
+{
+  "name": "safebees-ng",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build-nginx": "ng build --output-path /usr/local/Cellar/nginx/1.21.3/html",
+    "test": "ng test",
+    "deploy": "ng deploy --cname=www.safebe.es",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "private": true,
+  "dependencies": {
+    "a_package_which_will_be_upgraded_intern": "~1.1.1",
+    "a_package_not_required_anymore": "~1.1.1",
+    "a_package_from_the_app_which_we_wont_touch": "~1.1.1"
+  },
+  "devDependencies": {
+    "a_package_which_will_be_upgraded_intern": "~1.1.1",
+    "a_package_not_required_anymore": "~1.1.1",
+    "a_package_from_the_app_which_we_wont_touch": "~1.1.1"
+  }
+}
