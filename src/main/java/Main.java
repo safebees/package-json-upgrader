@@ -24,7 +24,6 @@ public class Main {
     public static final String DEPENDENCIES = "dependencies";
     public static final String DEV_DEPENDENCIES = "devDependencies";
 
-    @SuppressWarnings("rawtypes")
     public static void main(String[] args) throws IOException {
 
         Map<String, PackageAndVersion> appDeps = calculateDeps(List.of(PACKAGE_JSON_DESTINATION));
@@ -106,7 +105,6 @@ public class Main {
             for (Object packageName : value.keySet()) {
                 Object version = value.get(packageName);
                 if (version instanceof String && packageName instanceof String) {
-                    String packageName1 = (String) packageName;
                     PackageAndVersion packageAndVersion = new PackageAndVersion((String) packageName, (String) version, dev);
                     deps.put(getKey(packageAndVersion), packageAndVersion);
                 }
